@@ -1,0 +1,6 @@
+# parameter $1 is the name of the Java class with main() and
+# also the name of the jar file.
+rm *.class
+javac -Xlint:unchecked -classpath .:/home/spark/spark-2.4.0-bin-without-hadoop/jars/*:/home/hadoop/share/hadoop/common/*:/home/hadoop/share/hadoop/mapreduce/* $1.java
+jar cf $1.jar *.class
+
